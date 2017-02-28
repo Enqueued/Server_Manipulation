@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/ultimaq/NetBeansProjects/assignment2/src/log4j/log4j-core-2.7.jar"/>
+	<classpathentry kind="lib" path="/home/ultimaq/NetBeansProjects/assignment2/src/log4j/log4j-api-2.7.jar"/>
+	<classpathentry kind="lib" path="/home/ultimaq/NetBeansProjects/assignment2/src/log4j/log4j-1.2-api-2.7.jar"/>
+	<classpathentry kind="lib" path="/home/ultimaq/NetBeansProjects/assignment2/src/SqL/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+	<classpathentry kind="src" path="src/java"/>
+</classpath>
