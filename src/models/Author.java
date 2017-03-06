@@ -5,6 +5,12 @@
  */
 package models;
 
+import Audit_Trail.AuditEntry;
+import SqL.AuthorTableGateway;
+
+import java.sql.SQLException;
+import java.util.List;
+
 /**
  *
  * @author ultimaq
@@ -89,6 +95,10 @@ public class Author {
 	public String toString(){
 		return id + " : " + firstName + " " + lastName + " : Born: "
 			+ dob + " : " + gender + " : " + webSite;
+	}
+
+	public List<AuditEntry> getAuditTrail(Author auth, AuthorTableGateway gate) throws SQLException{
+		return gate.auditTrail(auth);
 	}
 	
 }
