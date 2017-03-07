@@ -45,10 +45,11 @@ public class AuthorTableGateway {
 				Author auth = new Author(
 						res.getString("first_name"),
 						res.getString("last_name"),
-						res.getString("dob"),
+						res.getDate("dob"),
 						res.getString("gender"),
-						res.getString("web_site"));
-				auth.setId(res.getInt("id"));
+						res.getString("web_site"),
+						res.getInt("id"),
+						res.getTimestamp("last_modified").toLocalDateTime());
 
 				authors.add(auth);
 			}
@@ -103,7 +104,7 @@ public class AuthorTableGateway {
 					"UPDATE AuthorTable SET first_name = ?, last_name = ?, dob = ?, gender = ?, web_site = ? WHERE ID = ?");
 			st.setString(1, it.getFirstName());
 			st.setString(2, it.getLastName());
-			st.setString(3, it.getDoB());
+			st.setString(3, String.valueOf((it.getDoB())));
 			st.setString(4, it.getGender());
 			st.setString(5, it.getWebSite());
 			st.setInt(6, it.getId());
@@ -130,7 +131,7 @@ public class AuthorTableGateway {
 					"INSERT INTO AuthorTable (first_name, last_name, dob, gender, web_site) VALUES (?, ?, ?, ?, ?)", PreparedStatement.RETURN_GENERATED_KEYS); //WHERE ID = ?");
 			st.setString(1, it.getFirstName());
 			st.setString(2, it.getLastName());
-			st.setString(3, it.getDoB());
+			st.setString(3, String.valueOf((it.getDoB())));
 			st.setString(4, it.getGender());
 			st.setString(5, it.getWebSite());
 			st.executeUpdate();

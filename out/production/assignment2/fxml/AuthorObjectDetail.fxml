@@ -21,5 +21,6 @@
       <TextField fx:id="id_box" layoutX="215.0" layoutY="192.0" promptText="               ##" />
       <Button fx:id="save_button" layoutX="248.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleButton" text="Save" />
       <Button fx:id="delete_button" layoutX="319.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleButton" text="Delete" />
+      <Button fx:id="Audit" layoutX="170.0" layoutY="302.0" mnemonicParsing="false" onAction="#onButtonPress" text="Audit Trail" />
    </children>
 </AnchorPane>
