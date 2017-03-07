@@ -6,10 +6,10 @@ import java.util.Date;
  * Created by ultimaq on 17/02/26.
  */
 public class AuditEntry {
-
     private String RD;
     private Date birth;
     private String msg;
+
     public AuditEntry(String RD, Date d, String msg){
        this.RD = RD;
        this.birth = d;
